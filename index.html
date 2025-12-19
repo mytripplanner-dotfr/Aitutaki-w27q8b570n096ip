@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aitutaki: L'Évasion Turquoise du Pacifique </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée au paradis d'Aitutaki</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Découverte de l'île principale</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Immersion dans le lagon turquoise</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Croisière légendaire sur le lagon</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Journée de détente et bien-être</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Aventure marine et pêche</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Randonnée et points de vue</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Kayak et exploration des motus proches</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Immersion culturelle et artisanat</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Voile et exploration des motus éloignés</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Derniers instants et souvenirs</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Départ d'Aitutaki</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">AITUTAKI</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Aitutaki: L'Évasion Turquoise du Pacifique</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 12 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 7100€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 Environ 35h depuis Sanchez avec escales multiples</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée au paradis d'Aitutaki</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage transcontinental, l'atterrissage à Aitutaki est une récompense en soi. L'air chaud et humide, le parfum des fleurs tropicales et la vue imprenable sur le lagon turquoise vous accueillent. Prenez le temps de vous installer et de vous imprégner de l'atmosphère paisible de cette île idyllique, en vous préparant à une immersion totale dans la douceur de vivre polynésienne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à Aitutaki</strong>: Après un vol intérieur depuis Rarotonga, vous serez accueilli par la beauté saisissante du lagon. Laissez-vous émerveiller par les nuances de bleu dès la descente de l'avion.</li><li>🛏️ <strong>Installation à l'hôtel</strong>: Rejoignez votre hébergement 3 étoiles, souvent un charmant bungalow en bord de lagon ou au cœur d'un jardin tropical. Prenez le temps de défaire vos valises et de vous rafraîchir.</li><li>🚶‍♂️ <strong>Balade légère sur la plage</strong>: Profitez de la fin d'après-midi pour une première promenade relaxante le long du rivage. Sentez le sable fin sous vos pieds et admirez le coucher de soleil sur le lagon, un spectacle apaisant après le voyage.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Décalage horaire</p>
+                                <p class="text-gray-700">Le décalage horaire avec la République Dominicaine est très important (environ 16 heures). Prévoyez une journée légère pour vous acclimater.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛺 Transfert aéroport</p>
+                                <p class="text-gray-700">La plupart des hébergements organisent les transferts depuis l'aéroport d'Aitutaki. Confirmez-le lors de votre réservation.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Découverte de l'île principale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'île principale d'Aitutaki vous ouvre ses bras. Louez un scooter, le moyen de transport local par excellence, et partez à l'aventure sur les petites routes bordées de cocotiers. Explorez les villages, rencontrez les habitants souriants et découvrez les points de vue panoramiques qui révèlent toute la splendeur du lagon. Une journée d'exploration douce pour s'imprégner de l'âme de l'île.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛵 <strong>Location de scooter et exploration</strong>: Louez un scooter pour la journée et parcourez l'île à votre rythme. C'est le meilleur moyen de découvrir les recoins cachés et les plages isolées.</li><li>⛪ <strong>Visite de l'église Arutanga</strong>: Admirez l'une des plus anciennes églises des Îles Cook, construite en 1828. Son architecture en corail et son intérieur simple mais majestueux offrent un aperçu de l'histoire missionnaire de l'île.</li><li>🌅 <strong>Coucher de soleil à Piraki Lookout</strong>: Terminez la journée par un panorama époustouflant depuis Piraki Lookout. La vue sur le lagon et les motus au soleil couchant est absolument magique et inoubliable.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Permis de conduire</p>
+                                <p class="text-gray-700">Un permis de conduire local est requis pour louer un scooter. Vous pouvez l'obtenir facilement au poste de police de Rarotonga ou d'Aitutaki avec votre permis international.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Cuisine locale</p>
+                                <p class="text-gray-700">Goûtez au "Ika Mata", un plat de poisson cru mariné au lait de coco et citron vert, une spécialité des Îles Cook.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion dans le lagon turquoise</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Le lagon d'Aitutaki est une merveille naturelle, réputé pour ses eaux cristallines et sa vie marine foisonnante. Aujourd'hui est dédié à l'exploration de ce joyau. Que ce soit en snorkeling ou en paddle, laissez-vous porter par la douceur des vagues et la beauté sous-marine. Une journée de pure détente et d'émerveillement, où le temps semble suspendu.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛶 <strong>Session de snorkeling ou paddleboard</strong>: Louez du matériel et partez explorer les eaux peu profondes près de votre hôtel. Le lagon regorge de poissons colorés et de coraux vivants, même à quelques mètres du rivage.</li><li>🏖️ <strong>Détente sur une plage isolée</strong>: Trouvez votre coin de paradis sur une des nombreuses plages de l'île. Lisez un livre, bronzez ou simplement écoutez le doux clapotis des vagues. La tranquillité est garantie.</li><li>🍹 <strong>Cocktail au bord du lagon</strong>: En fin de journée, savourez un cocktail tropical dans un bar en bord de mer. Admirez les couleurs changeantes du ciel et du lagon, un moment parfait pour se ressourcer.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Le soleil est très fort sous les tropiques. Utilisez une crème solaire à indice élevé et portez un chapeau et des lunettes de soleil.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">♻️ Respect de l'environnement</p>
+                                <p class="text-gray-700">Utilisez des crèmes solaires respectueuses des coraux pour préserver la biodiversité marine du lagon.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Croisière légendaire sur le lagon</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Préparez-vous pour l'expérience emblématique d'Aitutaki: une croisière inoubliable sur son lagon. Naviguez entre les motus (petits îlots), plongez dans des jardins de corail spectaculaires et explorez l'île de Tapuaetai, plus connue sous le nom de One Foot Island. Cette journée est une succession de paysages de cartes postales et de rencontres avec la faune marine, un véritable rêve éveillé.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚤 <strong>Croisière "Vaka Cruise" sur le lagon</strong>: Embarquez pour une journée complète de découverte du lagon. Ces croisières incluent généralement plusieurs arrêts snorkeling, un déjeuner barbecue sur un motu et la visite de One Foot Island.</li><li>🐠 <strong>Snorkeling dans les jardins de corail</strong>: Plongez dans les eaux cristallines et nagez au milieu de bancs de poissons tropicaux, de tortues et de coraux multicolores. Les spots de snorkeling sont parmi les plus beaux du Pacifique.</li><li>🏝️ <strong>Visite de One Foot Island (Tapuaetai)</strong>: Explorez ce motu emblématique, réputé pour sa beauté et son bureau de poste unique où vous pouvez faire tamponner votre passeport. C'est l'endroit idéal pour des photos mémorables.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Indispensables</p>
+                                <p class="text-gray-700">N'oubliez pas votre appareil photo étanche, des chaussures d'eau et une serviette pour la croisière.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✉️ Passeport</p>
+                                <p class="text-gray-700">Pensez à prendre votre passeport pour le tampon unique de One Foot Island, un souvenir original de votre voyage.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée de détente et bien-être</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après l'excitation de la croisière, offrez-vous une journée de pure relaxation. Aitutaki est l'endroit idéal pour se déconnecter et se ressourcer. Profitez des installations de votre hôtel, offrez-vous un massage ou simplement, laissez-vous bercer par le rythme lent de l'île. Une pause bienvenue pour recharger les batteries et savourer chaque instant de ce cadre idyllique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>💆‍♀️ <strong>Massage traditionnel polynésien</strong>: Offrez-vous un massage relaxant utilisant des huiles locales et des techniques ancestrales. C'est une expérience sensorielle qui apaise le corps et l'esprit.</li><li>📚 <strong>Lecture au bord de la piscine ou de la plage</strong>: Profitez du calme pour lire un bon livre, bercé par le bruit des vagues ou le chant des oiseaux tropicaux. Laissez le stress s'envoler.</li><li>🚶‍♀️ <strong>Promenade méditative au lever du soleil</strong>: Levez-vous tôt pour admirer le lever du soleil sur le lagon. La lumière douce et l'atmosphère sereine sont parfaites pour une marche méditative et un moment de pleine conscience.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧘 Activités douces</p>
+                                <p class="text-gray-700">Certains hôtels proposent des cours de yoga ou de méditation. Renseignez-vous à la réception.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📖 Culture locale</p>
+                                <p class="text-gray-700">Profitez de ce temps calme pour en apprendre davantage sur la culture et les légendes des Îles Cook.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventure marine et pêche</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Pour les amateurs d'aventure et de sensations fortes, cette journée est dédiée à la pêche en haute mer ou à une exploration plus approfondie du lagon. Aitutaki est réputée pour ses eaux poissonneuses, offrant des opportunités uniques de pêcher le thon, le marlin ou le mahi-mahi. Une expérience authentique pour se connecter avec l'océan et la tradition de pêche locale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🎣 <strong>Excursion de pêche en haute mer</strong>: Embarquez avec un capitaine local expérimenté pour une demi-journée de pêche sportive. Tentez de capturer des poissons pélagiques comme le thon ou le wahoo, une expérience excitante.</li><li>🐠 <strong>Plongée sous-marine (certifiés)</strong>: Si vous êtes plongeur certifié, explorez les sites de plongée extérieurs au lagon, réputés pour leurs requins de récif, raies manta et coraux intacts. Une visibilité exceptionnelle vous attend.</li><li>🍽️ <strong>Dégustation de votre prise</strong>: Si vous avez eu de la chance à la pêche, demandez à votre hôtel ou à un restaurant local de vous préparer votre prise du jour. Rien de tel que du poisson frais pour le dîner.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Coût des activités</p>
+                                <p class="text-gray-700">Les excursions de pêche et les plongées sont des activités coûteuses. Prévoyez un budget en conséquence.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌊 Conditions météo</p>
+                                <p class="text-gray-700">Les sorties en mer dépendent des conditions météorologiques. Soyez flexible avec votre programme.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Randonnée et points de vue</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aitutaki n'est pas seulement un lagon, c'est aussi une île verdoyante avec des collines offrant des vues imprenables. Aujourd'hui, chaussez vos chaussures de marche et partez à la découverte des hauteurs de l'île. Des sentiers discrets mènent à des panoramas spectaculaires sur le lagon et les motus, offrant une perspective différente sur la beauté d'Aitutaki. Une journée pour les amoureux de la nature et des paysages à couper le souffle.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>⛰️ <strong>Randonnée au Mont Maungapu</strong>: Gravissez le point culminant d'Aitutaki, le Mont Maungapu (124m). La montée est courte mais offre une vue panoramique à 360 degrés sur l'île et son lagon, absolument spectaculaire.</li><li>🌴 <strong>Exploration des plantations locales</strong>: Après la randonnée, promenez-vous dans les terres intérieures de l'île. Découvrez les plantations de taro, de bananes et de cocotiers, et observez la vie rurale d'Aitutaki.</li><li>🧺 <strong>Pique-nique avec vue</strong>: Préparez un pique-nique avec des produits locaux et savourez-le dans un endroit pittoresque avec vue sur le lagon. Un moment simple mais mémorable.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Équipement</p>
+                                <p class="text-gray-700">Portez des chaussures confortables et fermées pour la randonnée, et emportez de l'eau.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Orientation</p>
+                                <p class="text-gray-700">Les sentiers ne sont pas toujours bien balisés. Demandez conseil à votre hébergement ou aux locaux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Kayak et exploration des motus proches</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'aventure continue sur l'eau, mais à un rythme plus intime. Louez un kayak ou un canoë et pagayez vers les motus les plus proches de l'île principale. Découvrez des plages secrètes, des criques isolées et profitez de la solitude de ces petits paradis. Une journée d'exploration douce, parfaite pour se sentir seul au monde au cœur du Pacifique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛶 <strong>Excursion en kayak vers les motus voisins</strong>: Pagayez jusqu'à des motus comme Maina ou Honeymoon Island, souvent accessibles en kayak depuis la côte. Profitez de leurs plages désertes et de leurs eaux peu profondes.</li><li>🐚 <strong>Chasse aux coquillages et snorkeling</strong>: Sur ces motus isolés, explorez les rivages à la recherche de coquillages uniques et faites du snorkeling dans des eaux calmes et protégées, idéales pour observer la vie marine.</li><li>🌅 <strong>Dîner romantique en bord de mer</strong>: Terminez la journée par un dîner aux chandelles dans un restaurant avec vue sur le lagon. Savourez des fruits de mer frais dans une ambiance intime.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Hydratation</p>
+                                <p class="text-gray-700">Emportez beaucoup d'eau et des snacks pour votre excursion en kayak, ainsi qu'un sac étanche pour vos affaires.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Marées</p>
+                                <p class="text-gray-700">Renseignez-vous sur les marées avant de partir en kayak pour éviter de vous retrouver bloqué ou de devoir pagayer à contre-courant.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion culturelle et artisanat</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Au-delà de ses paysages de rêve, Aitutaki est riche d'une culture polynésienne vibrante. Aujourd'hui, plongez au cœur des traditions locales. Visitez des ateliers d'artisanat, assistez à une démonstration de tressage ou de sculpture, et découvrez l'histoire et les légendes de l'île. Une journée pour comprendre et apprécier l'âme des habitants d'Aitutaki.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🎨 <strong>Visite d'un atelier d'artisanat local</strong>: Rencontrez des artisans qui perpétuent les savoir-faire ancestraux, comme le tressage de paniers en feuilles de pandanus ou la sculpture sur bois. Vous pourrez y acheter des souvenirs authentiques.</li><li>🎶 <strong>Assister à une répétition de danse ou de chant</strong>: Si l'occasion se présente, assistez à une répétition des groupes de danse ou de chant locaux. C'est une immersion authentique dans la culture polynésienne et son énergie contagieuse.</li><li>📚 <strong>Visite du musée local (si disponible)</strong>: Renseignez-vous sur l'histoire et les coutumes d'Aitutaki. Même les petits musées insulaires regorgent souvent de trésors et d'anecdotes fascinantes.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Langue</p>
+                                <p class="text-gray-700">Les habitants parlent le Māori des Îles Cook et l'anglais. Quelques mots de Māori seront très appréciés.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Privilégiez l'artisanat local pour vos souvenirs, cela soutient l'économie de l'île et garantit l'authenticité.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Voile et exploration des motus éloignés</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Pour cette avant-dernière journée complète, partez à l'aventure vers des motus plus éloignés, accessibles uniquement en bateau. Louez un petit voilier avec skipper ou participez à une excursion privée pour découvrir des coins encore plus préservés du lagon. Une journée d'exploration exclusive, loin des sentiers battus, pour savourer la beauté intacte d'Aitutaki.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>⛵ <strong>Excursion en voilier privé</strong>: Louez un petit voilier avec un skipper pour une journée. Il vous emmènera vers des motus moins fréquentés et des spots de snorkeling secrets, loin des foules.</li><li>🐠 <strong>Snorkeling dans des zones vierges</strong>: Profitez de la tranquillité de ces lieux pour des sessions de snorkeling prolongées. La vie marine y est souvent plus abondante et les coraux plus colorés.</li><li>🍽️ <strong>Déjeuner pique-nique sur un motu désert</strong>: Votre skipper pourra vous déposer sur un motu isolé pour un déjeuner pique-nique. Imaginez-vous seul sur une plage de sable blanc, entouré par le bleu infini du Pacifique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💲 Option privée</p>
+                                <p class="text-gray-700">Cette option est plus onéreuse mais offre une flexibilité et une intimité inégalées pour explorer le lagon.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Personnalisation</p>
+                                <p class="text-gray-700">Discutez de vos préférences avec le skipper pour personnaliser votre itinéraire et découvrir les lieux qui vous intéressent le plus.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers instants et souvenirs</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est votre dernière journée complète à Aitutaki. Profitez-en pour revisiter vos endroits préférés, faire quelques achats de dernière minute ou simplement vous détendre une dernière fois sur la plage. Laissez-vous imprégner une dernière fois par la magie du lagon et les couleurs du Pacifique, en emportant avec vous des souvenirs impérissables de ce paradis.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Achats de souvenirs locaux</strong>: Flânez dans les petites boutiques de l'île pour trouver des perles noires, des paréos colorés, des sculptures en bois ou des bijoux faits main, des trésors à rapporter chez vous.</li><li>🏖️ <strong>Dernière baignade dans le lagon</strong>: Profitez d'une dernière baignade rafraîchissante dans les eaux turquoise du lagon. Imprégnez-vous de la chaleur du soleil et de la douceur de l'eau.</li><li> farewell <strong>Dîner d'adieu avec spectacle culturel</strong>: Certains restaurants ou hôtels proposent des soirées "Island Night" avec un buffet traditionnel "Umu" (cuisson au four tahitien) et des spectacles de danse polynésienne. Une excellente façon de dire au revoir à l'île.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💸 Monnaie</p>
+                                <p class="text-gray-700">La monnaie est le Dollar Néo-Zélandais (NZD). Les cartes de crédit sont acceptées dans les grands établissements, mais prévoyez du liquide pour les petits commerces.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📦 Bagages</p>
+                                <p class="text-gray-700">Commencez à préparer vos bagages et assurez-vous de ne rien oublier de vos précieux souvenirs.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ d'Aitutaki</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Le moment est venu de quitter ce petit coin de paradis. Après un dernier petit-déjeuner face au lagon, vous serez transféré à l'aéroport pour votre vol retour vers Rarotonga, puis vers votre prochaine destination. Emportez avec vous la sérénité et la beauté d'Aitutaki, des images et des sensations qui resteront gravées dans votre mémoire bien après votre retour.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>☕ <strong>Dernier petit-déjeuner avec vue</strong>: Savourez un dernier petit-déjeuner en admirant le lagon, un moment paisible pour dire au revoir à ce paysage enchanteur.</li><li>🛬 <strong>Transfert à l'aéroport</strong>: Votre transfert vous conduira à l'aéroport d'Aitutaki pour votre vol vers Rarotonga, marquant le début de votre voyage de retour.</li><li>✈️ <strong>Vol retour</strong>: Embarquez pour votre long voyage de retour, la tête remplie de souvenirs inoubliables de votre séjour à Aitutaki.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Aitutaki-w27q8b570n096ip/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure de départ</p>
+                                <p class="text-gray-700">Confirmez l'heure de votre transfert avec votre hébergement la veille de votre départ.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧳 Franchise bagages</p>
+                                <p class="text-gray-700">Vérifiez la franchise bagages pour votre vol intérieur Rarotonga-Aitutaki, elle est souvent plus restrictive que pour les vols internationaux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>3500€/pers (vols internationaux Sanchez-Aitutaki A/R en classe économique avec escales multiples)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>200€/pers (transferts aéroport, location scooter 8 jours, quelques taxis)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>720€/pers (environ 60€/jour pour 12 jours, restaurants locaux et quelques repas plus élaborés)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>2200€/pers (11 nuits en hôtel 3 étoiles, environ 200€/nuit)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>480€/pers (croisière lagon, snorkeling, pêche, plongée optionnelle, artisanat)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de mai à octobre.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">C'est la saison sèche, avec moins d'humidité et des températures agréables.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les risques de cyclones sont minimes durant cette période.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">👨‍👩‍👧‍👦 La population d'Aitutaki est d'environ 1800 habitants, majoritairement d'origine polynésienne (Māori des Îles Cook).</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗺️ Les Îles Cook sont un État associé à la Nouvelle-Zélande, situé en Polynésie. Aitutaki est l'une de ses îles les plus emblématiques.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">✉️ Aitutaki est célèbre pour son lagon, souvent classé parmi les plus beaux du monde, et pour son bureau de poste sur One Foot Island où l'on peut faire tamponner son passeport.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🐢 Le rythme de vie est très lent, on parle de "Island Time". Préparez-vous à la détente et à la patience.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Aitutaki-w27q8b570n096ip/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://cookislands.travel/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Cook Islands Tourism</strong></a></li>
+                    
+                        <li><a href="https://www.airraro.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>✈️ Air Rarotonga</strong></a></li>
+                    
+                        <li><a href="https://www.metservice.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ MetService (NZ)</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
