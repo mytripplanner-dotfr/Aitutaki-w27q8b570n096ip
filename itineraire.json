@@ -1,0 +1,390 @@
+{
+  "pays": "Îles Cook",
+  "drapeau": "🇨🇰",
+  "symbole": "🌺",
+  "titre": "Aitutaki: L'Évasion Turquoise du Pacifique",
+  "budget_total": "7100€",
+  "duree": "12 jours",
+  "temps_vol": "Environ 35h depuis Sanchez avec escales multiples",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée au paradis d'Aitutaki",
+      "legende": "Après un long voyage transcontinental, l'atterrissage à Aitutaki est une récompense en soi. L'air chaud et humide, le parfum des fleurs tropicales et la vue imprenable sur le lagon turquoise vous accueillent. Prenez le temps de vous installer et de vous imprégner de l'atmosphère paisible de cette île idyllique, en vous préparant à une immersion totale dans la douceur de vivre polynésienne.",
+      "lieu": "Aitutaki",
+      "activites": [
+        "🛬 <strong>Arrivée à Aitutaki</strong>: Après un vol intérieur depuis Rarotonga, vous serez accueilli par la beauté saisissante du lagon. Laissez-vous émerveiller par les nuances de bleu dès la descente de l'avion.",
+        "🛏️ <strong>Installation à l'hôtel</strong>: Rejoignez votre hébergement 3 étoiles, souvent un charmant bungalow en bord de lagon ou au cœur d'un jardin tropical. Prenez le temps de défaire vos valises et de vous rafraîchir.",
+        "🚶‍♂️ <strong>Balade légère sur la plage</strong>: Profitez de la fin d'après-midi pour une première promenade relaxante le long du rivage. Sentez le sable fin sous vos pieds et admirez le coucher de soleil sur le lagon, un spectacle apaisant après le voyage."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Décalage horaire",
+          "texte": "Le décalage horaire avec la République Dominicaine est très important (environ 16 heures). Prévoyez une journée légère pour vous acclimater."
+        },
+        {
+          "symbole": "🛺",
+          "titre": "Transfert aéroport",
+          "texte": "La plupart des hébergements organisent les transferts depuis l'aéroport d'Aitutaki. Confirmez-le lors de votre réservation."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🛵",
+      "titre": "Découverte de l'île principale",
+      "legende": "Aujourd'hui, l'île principale d'Aitutaki vous ouvre ses bras. Louez un scooter, le moyen de transport local par excellence, et partez à l'aventure sur les petites routes bordées de cocotiers. Explorez les villages, rencontrez les habitants souriants et découvrez les points de vue panoramiques qui révèlent toute la splendeur du lagon. Une journée d'exploration douce pour s'imprégner de l'âme de l'île.",
+      "lieu": "Aitutaki",
+      "activites": [
+        "🛵 <strong>Location de scooter et exploration</strong>: Louez un scooter pour la journée et parcourez l'île à votre rythme. C'est le meilleur moyen de découvrir les recoins cachés et les plages isolées.",
+        "⛪ <strong>Visite de l'église Arutanga</strong>: Admirez l'une des plus anciennes églises des Îles Cook, construite en 1828. Son architecture en corail et son intérieur simple mais majestueux offrent un aperçu de l'histoire missionnaire de l'île.",
+        "🌅 <strong>Coucher de soleil à Piraki Lookout</strong>: Terminez la journée par un panorama époustouflant depuis Piraki Lookout. La vue sur le lagon et les motus au soleil couchant est absolument magique et inoubliable."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Permis de conduire",
+          "texte": "Un permis de conduire local est requis pour louer un scooter. Vous pouvez l'obtenir facilement au poste de police de Rarotonga ou d'Aitutaki avec votre permis international."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Cuisine locale",
+          "texte": "Goûtez au \"Ika Mata\", un plat de poisson cru mariné au lait de coco et citron vert, une spécialité des Îles Cook."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🐠",
+      "titre": "Immersion dans le lagon turquoise",
+      "legende": "Le lagon d'Aitutaki est une merveille naturelle, réputé pour ses eaux cristallines et sa vie marine foisonnante. Aujourd'hui est dédié à l'exploration de ce joyau. Que ce soit en snorkeling ou en paddle, laissez-vous porter par la douceur des vagues et la beauté sous-marine. Une journée de pure détente et d'émerveillement, où le temps semble suspendu.",
+      "lieu": "Aitutaki",
+      "activites": [
+        "🛶 <strong>Session de snorkeling ou paddleboard</strong>: Louez du matériel et partez explorer les eaux peu profondes près de votre hôtel. Le lagon regorge de poissons colorés et de coraux vivants, même à quelques mètres du rivage.",
+        "🏖️ <strong>Détente sur une plage isolée</strong>: Trouvez votre coin de paradis sur une des nombreuses plages de l'île. Lisez un livre, bronzez ou simplement écoutez le doux clapotis des vagues. La tranquillité est garantie.",
+        "🍹 <strong>Cocktail au bord du lagon</strong>: En fin de journée, savourez un cocktail tropical dans un bar en bord de mer. Admirez les couleurs changeantes du ciel et du lagon, un moment parfait pour se ressourcer."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Le soleil est très fort sous les tropiques. Utilisez une crème solaire à indice élevé et portez un chapeau et des lunettes de soleil."
+        },
+        {
+          "symbole": "♻️",
+          "titre": "Respect de l'environnement",
+          "texte": "Utilisez des crèmes solaires respectueuses des coraux pour préserver la biodiversité marine du lagon."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🚤",
+      "titre": "Croisière légendaire sur le lagon",
+      "legende": "Préparez-vous pour l'expérience emblématique d'Aitutaki: une croisière inoubliable sur son lagon. Naviguez entre les motus (petits îlots), plongez dans des jardins de corail spectaculaires et explorez l'île de Tapuaetai, plus connue sous le nom de One Foot Island. Cette journée est une succession de paysages de cartes postales et de rencontres avec la faune marine, un véritable rêve éveillé.",
+      "lieu": "Lagon d'Aitutaki",
+      "activites": [
+        "🚤 <strong>Croisière \"Vaka Cruise\" sur le lagon</strong>: Embarquez pour une journée complète de découverte du lagon. Ces croisières incluent généralement plusieurs arrêts snorkeling, un déjeuner barbecue sur un motu et la visite de One Foot Island.",
+        "🐠 <strong>Snorkeling dans les jardins de corail</strong>: Plongez dans les eaux cristallines et nagez au milieu de bancs de poissons tropicaux, de tortues et de coraux multicolores. Les spots de snorkeling sont parmi les plus beaux du Pacifique.",
+        "🏝️ <strong>Visite de One Foot Island (Tapuaetai)</strong>: Explorez ce motu emblématique, réputé pour sa beauté et son bureau de poste unique où vous pouvez faire tamponner votre passeport. C'est l'endroit idéal pour des photos mémorables."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Indispensables",
+          "texte": "N'oubliez pas votre appareil photo étanche, des chaussures d'eau et une serviette pour la croisière."
+        },
+        {
+          "symbole": "✉️",
+          "titre": "Passeport",
+          "texte": "Pensez à prendre votre passeport pour le tampon unique de One Foot Island, un souvenir original de votre voyage."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🧘‍♀️",
+      "titre": "Journée de détente et bien-être",
+      "legende": "Après l'excitation de la croisière, offrez-vous une journée de pure relaxation. Aitutaki est l'endroit idéal pour se déconnecter et se ressourcer. Profitez des installations de votre hôtel, offrez-vous un massage ou simplement, laissez-vous bercer par le rythme lent de l'île. Une pause bienvenue pour recharger les batteries et savourer chaque instant de ce cadre idyllique.",
+      "lieu": "Aitutaki",
+      "activites": [
+        "💆‍♀️ <strong>Massage traditionnel polynésien</strong>: Offrez-vous un massage relaxant utilisant des huiles locales et des techniques ancestrales. C'est une expérience sensorielle qui apaise le corps et l'esprit.",
+        "📚 <strong>Lecture au bord de la piscine ou de la plage</strong>: Profitez du calme pour lire un bon livre, bercé par le bruit des vagues ou le chant des oiseaux tropicaux. Laissez le stress s'envoler.",
+        "🚶‍♀️ <strong>Promenade méditative au lever du soleil</strong>: Levez-vous tôt pour admirer le lever du soleil sur le lagon. La lumière douce et l'atmosphère sereine sont parfaites pour une marche méditative et un moment de pleine conscience."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🧘",
+          "titre": "Activités douces",
+          "texte": "Certains hôtels proposent des cours de yoga ou de méditation. Renseignez-vous à la réception."
+        },
+        {
+          "symbole": "📖",
+          "titre": "Culture locale",
+          "texte": "Profitez de ce temps calme pour en apprendre davantage sur la culture et les légendes des Îles Cook."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🎣",
+      "titre": "Aventure marine et pêche",
+      "legende": "Pour les amateurs d'aventure et de sensations fortes, cette journée est dédiée à la pêche en haute mer ou à une exploration plus approfondie du lagon. Aitutaki est réputée pour ses eaux poissonneuses, offrant des opportunités uniques de pêcher le thon, le marlin ou le mahi-mahi. Une expérience authentique pour se connecter avec l'océan et la tradition de pêche locale.",
+      "lieu": "Aitutaki",
+      "activites": [
+        "🎣 <strong>Excursion de pêche en haute mer</strong>: Embarquez avec un capitaine local expérimenté pour une demi-journée de pêche sportive. Tentez de capturer des poissons pélagiques comme le thon ou le wahoo, une expérience excitante.",
+        "🐠 <strong>Plongée sous-marine (certifiés)</strong>: Si vous êtes plongeur certifié, explorez les sites de plongée extérieurs au lagon, réputés pour leurs requins de récif, raies manta et coraux intacts. Une visibilité exceptionnelle vous attend.",
+        "🍽️ <strong>Dégustation de votre prise</strong>: Si vous avez eu de la chance à la pêche, demandez à votre hôtel ou à un restaurant local de vous préparer votre prise du jour. Rien de tel que du poisson frais pour le dîner."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "💰",
+          "titre": "Coût des activités",
+          "texte": "Les excursions de pêche et les plongées sont des activités coûteuses. Prévoyez un budget en conséquence."
+        },
+        {
+          "symbole": "🌊",
+          "titre": "Conditions météo",
+          "texte": "Les sorties en mer dépendent des conditions météorologiques. Soyez flexible avec votre programme."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🚶‍♀️",
+      "titre": "Randonnée et points de vue",
+      "legende": "Aitutaki n'est pas seulement un lagon, c'est aussi une île verdoyante avec des collines offrant des vues imprenables. Aujourd'hui, chaussez vos chaussures de marche et partez à la découverte des hauteurs de l'île. Des sentiers discrets mènent à des panoramas spectaculaires sur le lagon et les motus, offrant une perspective différente sur la beauté d'Aitutaki. Une journée pour les amoureux de la nature et des paysages à couper le souffle.",
+      "lieu": "Aitutaki",
+      "activites": [
+        "⛰️ <strong>Randonnée au Mont Maungapu</strong>: Gravissez le point culminant d'Aitutaki, le Mont Maungapu (124m). La montée est courte mais offre une vue panoramique à 360 degrés sur l'île et son lagon, absolument spectaculaire.",
+        "🌴 <strong>Exploration des plantations locales</strong>: Après la randonnée, promenez-vous dans les terres intérieures de l'île. Découvrez les plantations de taro, de bananes et de cocotiers, et observez la vie rurale d'Aitutaki.",
+        "🧺 <strong>Pique-nique avec vue</strong>: Préparez un pique-nique avec des produits locaux et savourez-le dans un endroit pittoresque avec vue sur le lagon. Un moment simple mais mémorable."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "👟",
+          "titre": "Équipement",
+          "texte": "Portez des chaussures confortables et fermées pour la randonnée, et emportez de l'eau."
+        },
+        {
+          "symbole": "🗺️",
+          "titre": "Orientation",
+          "texte": "Les sentiers ne sont pas toujours bien balisés. Demandez conseil à votre hébergement ou aux locaux."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🛶",
+      "titre": "Kayak et exploration des motus proches",
+      "legende": "Aujourd'hui, l'aventure continue sur l'eau, mais à un rythme plus intime. Louez un kayak ou un canoë et pagayez vers les motus les plus proches de l'île principale. Découvrez des plages secrètes, des criques isolées et profitez de la solitude de ces petits paradis. Une journée d'exploration douce, parfaite pour se sentir seul au monde au cœur du Pacifique.",
+      "lieu": "Aitutaki",
+      "activites": [
+        "🛶 <strong>Excursion en kayak vers les motus voisins</strong>: Pagayez jusqu'à des motus comme Maina ou Honeymoon Island, souvent accessibles en kayak depuis la côte. Profitez de leurs plages désertes et de leurs eaux peu profondes.",
+        "🐚 <strong>Chasse aux coquillages et snorkeling</strong>: Sur ces motus isolés, explorez les rivages à la recherche de coquillages uniques et faites du snorkeling dans des eaux calmes et protégées, idéales pour observer la vie marine.",
+        "🌅 <strong>Dîner romantique en bord de mer</strong>: Terminez la journée par un dîner aux chandelles dans un restaurant avec vue sur le lagon. Savourez des fruits de mer frais dans une ambiance intime."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "💧",
+          "titre": "Hydratation",
+          "texte": "Emportez beaucoup d'eau et des snacks pour votre excursion en kayak, ainsi qu'un sac étanche pour vos affaires."
+        },
+        {
+          "symbole": "⏰",
+          "titre": "Marées",
+          "texte": "Renseignez-vous sur les marées avant de partir en kayak pour éviter de vous retrouver bloqué ou de devoir pagayer à contre-courant."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🎭",
+      "titre": "Immersion culturelle et artisanat",
+      "legende": "Au-delà de ses paysages de rêve, Aitutaki est riche d'une culture polynésienne vibrante. Aujourd'hui, plongez au cœur des traditions locales. Visitez des ateliers d'artisanat, assistez à une démonstration de tressage ou de sculpture, et découvrez l'histoire et les légendes de l'île. Une journée pour comprendre et apprécier l'âme des habitants d'Aitutaki.",
+      "lieu": "Aitutaki",
+      "activites": [
+        "🎨 <strong>Visite d'un atelier d'artisanat local</strong>: Rencontrez des artisans qui perpétuent les savoir-faire ancestraux, comme le tressage de paniers en feuilles de pandanus ou la sculpture sur bois. Vous pourrez y acheter des souvenirs authentiques.",
+        "🎶 <strong>Assister à une répétition de danse ou de chant</strong>: Si l'occasion se présente, assistez à une répétition des groupes de danse ou de chant locaux. C'est une immersion authentique dans la culture polynésienne et son énergie contagieuse.",
+        "📚 <strong>Visite du musée local (si disponible)</strong>: Renseignez-vous sur l'histoire et les coutumes d'Aitutaki. Même les petits musées insulaires regorgent souvent de trésors et d'anecdotes fascinantes."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🗣️",
+          "titre": "Langue",
+          "texte": "Les habitants parlent le Māori des Îles Cook et l'anglais. Quelques mots de Māori seront très appréciés."
+        },
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Privilégiez l'artisanat local pour vos souvenirs, cela soutient l'économie de l'île et garantit l'authenticité."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "⛵",
+      "titre": "Voile et exploration des motus éloignés",
+      "legende": "Pour cette avant-dernière journée complète, partez à l'aventure vers des motus plus éloignés, accessibles uniquement en bateau. Louez un petit voilier avec skipper ou participez à une excursion privée pour découvrir des coins encore plus préservés du lagon. Une journée d'exploration exclusive, loin des sentiers battus, pour savourer la beauté intacte d'Aitutaki.",
+      "lieu": "Lagon d'Aitutaki",
+      "activites": [
+        "⛵ <strong>Excursion en voilier privé</strong>: Louez un petit voilier avec un skipper pour une journée. Il vous emmènera vers des motus moins fréquentés et des spots de snorkeling secrets, loin des foules.",
+        "🐠 <strong>Snorkeling dans des zones vierges</strong>: Profitez de la tranquillité de ces lieux pour des sessions de snorkeling prolongées. La vie marine y est souvent plus abondante et les coraux plus colorés.",
+        "🍽️ <strong>Déjeuner pique-nique sur un motu désert</strong>: Votre skipper pourra vous déposer sur un motu isolé pour un déjeuner pique-nique. Imaginez-vous seul sur une plage de sable blanc, entouré par le bleu infini du Pacifique."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "💲",
+          "titre": "Option privée",
+          "texte": "Cette option est plus onéreuse mais offre une flexibilité et une intimité inégalées pour explorer le lagon."
+        },
+        {
+          "symbole": "🗺️",
+          "titre": "Personnalisation",
+          "texte": "Discutez de vos préférences avec le skipper pour personnaliser votre itinéraire et découvrir les lieux qui vous intéressent le plus."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🛍️",
+      "titre": "Derniers instants et souvenirs",
+      "legende": "C'est votre dernière journée complète à Aitutaki. Profitez-en pour revisiter vos endroits préférés, faire quelques achats de dernière minute ou simplement vous détendre une dernière fois sur la plage. Laissez-vous imprégner une dernière fois par la magie du lagon et les couleurs du Pacifique, en emportant avec vous des souvenirs impérissables de ce paradis.",
+      "lieu": "Aitutaki",
+      "activites": [
+        "🛍️ <strong>Achats de souvenirs locaux</strong>: Flânez dans les petites boutiques de l'île pour trouver des perles noires, des paréos colorés, des sculptures en bois ou des bijoux faits main, des trésors à rapporter chez vous.",
+        "🏖️ <strong>Dernière baignade dans le lagon</strong>: Profitez d'une dernière baignade rafraîchissante dans les eaux turquoise du lagon. Imprégnez-vous de la chaleur du soleil et de la douceur de l'eau.",
+        " farewell <strong>Dîner d'adieu avec spectacle culturel</strong>: Certains restaurants ou hôtels proposent des soirées \"Island Night\" avec un buffet traditionnel \"Umu\" (cuisson au four tahitien) et des spectacles de danse polynésienne. Une excellente façon de dire au revoir à l'île."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "💸",
+          "titre": "Monnaie",
+          "texte": "La monnaie est le Dollar Néo-Zélandais (NZD). Les cartes de crédit sont acceptées dans les grands établissements, mais prévoyez du liquide pour les petits commerces."
+        },
+        {
+          "symbole": "📦",
+          "titre": "Bagages",
+          "texte": "Commencez à préparer vos bagages et assurez-vous de ne rien oublier de vos précieux souvenirs."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🛫",
+      "titre": "Départ d'Aitutaki",
+      "legende": "Le moment est venu de quitter ce petit coin de paradis. Après un dernier petit-déjeuner face au lagon, vous serez transféré à l'aéroport pour votre vol retour vers Rarotonga, puis vers votre prochaine destination. Emportez avec vous la sérénité et la beauté d'Aitutaki, des images et des sensations qui resteront gravées dans votre mémoire bien après votre retour.",
+      "lieu": "Aitutaki",
+      "activites": [
+        "☕ <strong>Dernier petit-déjeuner avec vue</strong>: Savourez un dernier petit-déjeuner en admirant le lagon, un moment paisible pour dire au revoir à ce paysage enchanteur.",
+        "🛬 <strong>Transfert à l'aéroport</strong>: Votre transfert vous conduira à l'aéroport d'Aitutaki pour votre vol vers Rarotonga, marquant le début de votre voyage de retour.",
+        "✈️ <strong>Vol retour</strong>: Embarquez pour votre long voyage de retour, la tête remplie de souvenirs inoubliables de votre séjour à Aitutaki."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de départ",
+          "texte": "Confirmez l'heure de votre transfert avec votre hébergement la veille de votre départ."
+        },
+        {
+          "symbole": "🧳",
+          "titre": "Franchise bagages",
+          "texte": "Vérifiez la franchise bagages pour votre vol intérieur Rarotonga-Aitutaki, elle est souvent plus restrictive que pour les vols internationaux."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "3500€/pers (vols internationaux Sanchez-Aitutaki A/R en classe économique avec escales multiples)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "200€/pers (transferts aéroport, location scooter 8 jours, quelques taxis)",
+      "symbole": "🛵"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "720€/pers (environ 60€/jour pour 12 jours, restaurants locaux et quelques repas plus élaborés)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "2200€/pers (11 nuits en hôtel 3 étoiles, environ 200€/nuit)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "480€/pers (croisière lagon, snorkeling, pêche, plongée optionnelle, artisanat)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de mai à octobre.",
+      "symbole": "☀️"
+    },
+    {
+      "titre": "C'est la saison sèche, avec moins d'humidité et des températures agréables.",
+      "symbole": "🌡️"
+    },
+    {
+      "titre": "Les risques de cyclones sont minimes durant cette période.",
+      "symbole": "🌀"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La population d'Aitutaki est d'environ 1800 habitants, majoritairement d'origine polynésienne (Māori des Îles Cook).",
+      "symbole": "👨‍👩‍👧‍👦"
+    },
+    {
+      "titre": "Les Îles Cook sont un État associé à la Nouvelle-Zélande, situé en Polynésie. Aitutaki est l'une de ses îles les plus emblématiques.",
+      "symbole": "🗺️"
+    },
+    {
+      "titre": "Aitutaki est célèbre pour son lagon, souvent classé parmi les plus beaux du monde, et pour son bureau de poste sur One Foot Island où l'on peut faire tamponner son passeport.",
+      "symbole": "✉️"
+    },
+    {
+      "titre": "Le rythme de vie est très lent, on parle de \"Island Time\". Préparez-vous à la détente et à la patience.",
+      "symbole": "🐢"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles sur le tourisme aux Îles Cook",
+      "titre": "Cook Islands Tourism",
+      "url": "https://cookislands.travel/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Vols inter-îles (Rarotonga-Aitutaki)",
+      "titre": "Air Rarotonga",
+      "url": "https://www.airraro.com/",
+      "symbole": "✈️"
+    },
+    {
+      "legende": "Prévisions météo pour les Îles Cook",
+      "titre": "MetService (NZ)",
+      "url": "https://www.metservice.com/",
+      "symbole": "🌤️"
+    }
+  ]
+}
